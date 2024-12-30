@@ -8,13 +8,12 @@ const ThemeSwitcher = () => {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme()
     const [mounted, setMounted] = useState(false)
 
-    // Only show the UI after first render on the client
     useEffect(() => {
         setMounted(true)
     }, [])
 
     if (!mounted) {
-        return <div>Loading...</div> // Optional loading placeholder
+        return <div>Loading...</div>
     }
 
     return (

@@ -1,6 +1,6 @@
 'use client';
 
-import { colorsTuple, createTheme } from '@mantine/core';
+import { colorsTuple, createTheme, MantineColorsTuple } from '@mantine/core';
 
 export const theme = createTheme({
   primaryColor: 'orange',

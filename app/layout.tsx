@@ -1,18 +1,19 @@
-
 import '@mantine/core/styles.css';
-
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 import Header from './components/Header/Header';
 import { SelectPanelContextProvider } from './state/context/SelectPanelContext';
+import { BackgroundPanelContextProvider } from './state/context/BackgroundPanelContext';
+import { Provider } from 'react-redux';
+import StoreProvider from './StoreProvider';
 
 export const metadata = {
   title: 'Social Media Post Editor',
   description: 'I am using Mantine with Next.js!',
 };
 
-export default function RootLayout({ children }: { children: any }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
@@ -24,13 +25,17 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>
-          <Header />
-          <SelectPanelContextProvider>
+        <StoreProvider >
 
-            {children}
-          </SelectPanelContextProvider>
-        </MantineProvider>
+          <MantineProvider theme={theme}>
+            <Header />
+            <SelectPanelContextProvider>
+
+              {children}
+            </SelectPanelContextProvider>
+          </MantineProvider>
+        </StoreProvider>
+
       </body>
     </html>
   );

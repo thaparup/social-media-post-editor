@@ -1,22 +1,20 @@
-'use client'
-import { Flex } from "@mantine/core";
-import { ColorSchemeToggle } from "./components/ColorSchemeToggle/ColorSchemeToggle";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Welcome } from "./components/Welcome/Welcome";
-import LeftHandPanel from "./components/LeftHandPanel/LeftHandPanel";
-import { useSelector } from "react-redux";
-import { RootState } from "./state/store/store";
-import { use } from "react";
+'use client';
 
+import { Flex } from '@mantine/core';
+import Header from './components/Header/Header';
+import LeftHandPanel from './components/LeftHandPanel/LeftHandPanel';
+import { Navbar } from './components/Navbar/Navbar';
+import RightHandPanel from './components/RightHandPanel/RightHandPanel';
 
 export default function HomePage() {
-
-
   return (
-    <Flex direction="row" gap={12}>
-
-      <Navbar />
-      <LeftHandPanel />
-    </Flex>
+    <div style={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
+      <Header />
+      <Flex direction="row" gap={12} style={{ height: '93vh', width: '100vw' }}>
+        <Navbar />
+        <LeftHandPanel />
+        <RightHandPanel />
+      </Flex>
+    </div>
   );
 }

@@ -17,7 +17,6 @@ const Background = () => {
 
     const canvasState = useAppSelector((state: RootState) => state.Canvas);
     const dispatch = useAppDispatch();
-    console.log(canvasState.canvasBgType)
 
 
     return (

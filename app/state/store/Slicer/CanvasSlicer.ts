@@ -3,9 +3,10 @@ import { CanvasBgType } from '@/app/types/typeCanvasBg';
 
 const initCanvasState = {
   canvasBgType: 'Solid' as CanvasBgType,
-  canvasBgSolid: 'rgba(47, 119, 150, 0.7)' as String,
+  canvasBgSolid: 'rgba(47, 119, 150, 0.7)' as string,
   canvasBgGradient: '' as String,
   canvasBgImage: '' as String,
+  canvasBgColor: 'rgba(47, 119, 150, 0.7)' as string,
 };
 const CanvasSlicer = createSlice({
   initialState: initCanvasState,
@@ -18,22 +19,24 @@ const CanvasSlicer = createSlice({
       state.canvasBgType = 'Solid';
     },
     setCanvasBgTypeAsGradient: (state) => {
-      console.log('function called');
       state.canvasBgType = 'Gradient';
     },
     setCanvasBgTypeAsImage: (state) => {
       state.canvasBgType = 'Image';
     },
 
-    setCanvasBgSolid: (state) => {
-      state.canvasBgType = 'Solid';
+    setCanvasBgColor: (state, action: PayloadAction<string>) => {
+      state.canvasBgColor = action.payload;
     },
-    setCanvasBgGradient: (state) => {
-      state.canvasBgGradient = 'Gradient';
-    },
-    setCanvasBgImage: (state) => {
-      state.canvasBgImage = 'Image';
-    },
+    // setCanvasBgSolid: (state) => {
+    //   state.canvasBgType = 'Solid';
+    // },
+    // setCanvasBgGradient: (state) => {
+    //   state.canvasBgGradient = 'Gradient';
+    // },
+    // setCanvasBgImage: (state) => {
+    //   state.canvasBgImage = 'Image';
+    // },
   },
 });
 
@@ -42,8 +45,9 @@ export const {
   setCanvasBgTypeAsSolid,
   setCanvasBgTypeAsGradient,
   setCanvasBgTypeAsImage,
-  setCanvasBgSolid,
-  setCanvasBgGradient,
-  setCanvasBgImage,
+  // setCanvasBgSolid,
+  // setCanvasBgGradient,
+  // setCanvasBgImage,
+  setCanvasBgColor,
 } = CanvasSlicer.actions;
 export default CanvasSlicer.reducer;

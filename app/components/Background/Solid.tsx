@@ -1,11 +1,22 @@
+import { useAppDispatch, useAppSelector } from '@/app/lib/hooks';
+import { setCanvasBgColor } from '@/app/state/store/Slicer/CanvasSlicer';
 import { ColorPicker, Text } from '@mantine/core'
-import React, { useState } from 'react'
+import { on } from 'events';
+import React, { useEffect, useState } from 'react'
 
 const Solid = () => {
     const [value, onChange] = useState('rgba(47, 119, 150, 0.7)');
+    const dispatch = useAppDispatch();
+
+    const handleChange = (color: string) => {
+        onChange(color)
+        console.log(color)
+        dispatch(setCanvasBgColor(color));
+
+    }
     return (
 
-        <ColorPicker style={{ marginTop: '2rem', width: '100%' }} format="rgba" value={value} onChange={onChange} swatchesPerRow={9} swatches={[
+        <ColorPicker style={{ marginTop: '2rem', width: '100%' }} format="rgba" value={value} onChange={(color: string) => { handleChange(color) }} swatchesPerRow={9} swatches={[
             "#25262b",
             "#868e96",
             "#fa5252",

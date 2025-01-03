@@ -2,6 +2,7 @@ import { suggestionColors } from '@/app/constants/SuggestionColors'
 import { theme } from '@/theme'
 import { ScrollArea, SimpleGrid, Text } from '@mantine/core'
 import React from 'react'
+import classes from './Background.module.css'
 
 const Suggestion = ({ degree }: { degree: number }) => {
 
@@ -9,7 +10,7 @@ const Suggestion = ({ degree }: { degree: number }) => {
 
     return (
         <div >
-            <Text fz='lg' fw={700} mb={20} mt={20} >Suggestions</Text>
+            <Text className={classes.suggestionTitle}>Suggestions</Text>
 
             <ScrollArea style={{ height: 300, width: "100%", marginRight: '0px' }} type="scroll"
                 scrollbarSize={4}

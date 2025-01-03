@@ -2,3 +2,9 @@
   min-width: 17rem;
   max-width: 17rem;
 }
+.suggestionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: light-dark(var(--mantine-color-gray-3), white);
+  margin-bottom: 1rem;
+}

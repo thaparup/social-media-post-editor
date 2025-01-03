@@ -1,11 +1,12 @@
 import '@mantine/core/styles.css';
+
 import React from 'react';
+import { Provider } from 'react-redux';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 import Header from './components/Header/Header';
-import { SelectPanelContextProvider } from './state/context/SelectPanelContext';
 import { BackgroundPanelContextProvider } from './state/context/BackgroundPanelContext';
-import { Provider } from 'react-redux';
+import { SelectPanelContextProvider } from './state/context/SelectPanelContext';
 import StoreProvider from './StoreProvider';
 
 export const metadata = {
@@ -25,17 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <StoreProvider >
-
+        <StoreProvider>
           <MantineProvider theme={theme}>
-            <Header />
-            <SelectPanelContextProvider>
-
-              {children}
-            </SelectPanelContextProvider>
+            <SelectPanelContextProvider>{children}</SelectPanelContextProvider>
           </MantineProvider>
         </StoreProvider>
-
       </body>
     </html>
   );

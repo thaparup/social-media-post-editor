@@ -2,5 +2,12 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  padding: 9px 0px;
+  height: 7vh;
+  align-items: center;
+}
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: light-dark(var(--mantine-color-gray-3), white);
+  padding-left: 2rem;
 }

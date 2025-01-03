@@ -30,7 +30,7 @@ const Gradient = () => {
 
 
     return (
-        <div style={{ width: '100%', height: '100%' }} className={classes.container}>
+        <div style={{ width: '100%', height: '100%', }} className={classes.container}>
             <Flex direction="column" gap={12} justify={'center'} align={'center'} mt={20}>
 
                 <ColorInput placeholder="Pick a color" value={firstColor} onChange={setFirstColor} w='70%' style={{ margin: 'auto', }} />

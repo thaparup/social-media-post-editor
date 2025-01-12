@@ -8,15 +8,18 @@ import { useSelectPanelContext } from '@/app/state/context/SelectPanelContext'
 import { useAppSelector } from '@/app/lib/hooks'
 import Shapes from '../Shapes/Shapes'
 import TextSection from '../TextSection/TextSection'
+import Image from '../Image/Image'
 
 const LeftHandPanel = () => {
 
     const { selected
     } = useSelectPanelContext()
+
     return (
         <div className={classes.container}>
             {selected === 'Background' ? <Background /> : null}
             {selected === 'Text' ? <TextSection /> : null}
+            {selected === 'Image' ? <Image /> : null}
 
         </div>
     )

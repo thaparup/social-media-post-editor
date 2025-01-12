@@ -1,13 +1,17 @@
+import { MutableRefObject, useRef } from 'react';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { DemoTextBoxValue } from '@/app/constants/DemoTextBoxValue';
+import { TextBoxType } from '@/app/types/textBox';
 import { CanvasBgType } from '@/app/types/typeCanvasBg';
 
 const initCanvasState = {
   canvasBgType: 'Solid' as CanvasBgType,
-  canvasBgSolid: 'rgba(47, 119, 150, 0.7)' as string,
-  canvasBgGradient: '' as String,
-  canvasBgImage: '' as String,
-  canvasBgColor: 'rgba(47, 119, 150, 0.7)' as string,
+  // canvasBgSolid: 'rgba(47, 119, 150, 0.7)' as string,
+  // canvasBgGradient: '' as String,
+  // canvasBgImage: '' as String,
+  canvasBgColor: '#f76707' as string,
 };
+
 const CanvasSlicer = createSlice({
   initialState: initCanvasState,
   name: 'Canvas',

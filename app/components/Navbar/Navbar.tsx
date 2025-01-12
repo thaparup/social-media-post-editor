@@ -35,7 +35,7 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 const mockdata = [
   { icon: IconHome2, label: 'Background' },
   { icon: IconGauge, label: 'Text' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
+  { icon: IconDeviceDesktopAnalytics, label: 'Image' },
   { icon: IconCalendarStats, label: 'Releases' },
   { icon: IconUser, label: 'Account' },
   { icon: IconFingerprint, label: 'Security' },
@@ -43,8 +43,8 @@ const mockdata = [
 ];
 
 export function Navbar() {
-  const [active, setActive] = useState(2);
-  const { setSelected } = useSelectPanelContext();
+  const [active, setActive] = useState(0);
+  const { selected, setSelected } = useSelectPanelContext();
 
   const links = mockdata.map((link, index) => (
     <NavbarLink
@@ -57,7 +57,7 @@ export function Navbar() {
       }}
     />
   ));
-
+  console.log(selected)
   return (
     <nav className={style.navbar} style={{ height: '93vh', overflow: 'hidden', minWidth: '6vw', maxWidth: '6vw' }}>
       <div className={style.navbarMain}>

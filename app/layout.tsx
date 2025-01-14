@@ -1,3 +1,4 @@
+
 import '@mantine/core/styles.css';
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
@@ -13,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en" {...mantineHtmlProps} >
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/pie-chart-svgrepo-com.svg" />

@@ -1,3 +1,4 @@
+
 import { suggestionColors } from '@/app/constants/SuggestionColors'
 import { theme } from '@/theme'
 import { ScrollArea, SimpleGrid, Text } from '@mantine/core'

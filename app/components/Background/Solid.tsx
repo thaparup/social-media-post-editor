@@ -1,3 +1,4 @@
+'use client'
 import { useAppDispatch, useAppSelector } from '@/app/lib/hooks';
 import { setCanvasBgColor } from '@/app/state/store/Slicer/CanvasSlicer';
 import { ColorPicker, Text } from '@mantine/core'

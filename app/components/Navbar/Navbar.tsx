@@ -57,7 +57,6 @@ export function Navbar() {
       }}
     />
   ));
-  console.log(selected)
   return (
     <nav className={style.navbar} style={{ height: '93vh', overflow: 'hidden', minWidth: '6vw', maxWidth: '6vw' }}>
       <div className={style.navbarMain}>

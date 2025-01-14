@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import { Button, ColorInput, ColorPicker, Flex, Popover, ScrollArea, Slider, Text } from '@mantine/core';
 import classes from './Background.module.css'

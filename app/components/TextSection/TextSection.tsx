@@ -1,7 +1,7 @@
 'use client'
 import { FONTFAMILIES } from '@/app/constants/FontFamilylist';
 import { useCanvas } from '@/app/state/context/CanvasContext'
-import { FontStyleType } from '@/app/types/FontStyle';
+import { FontStyleType } from '@/app/state/context/types/FontStyle';
 import { Button, ColorInput, Flex, Radio, ScrollArea, Select, Slider, Text, Textarea } from '@mantine/core'
 import React, { useEffect, useRef, useState } from 'react'
 

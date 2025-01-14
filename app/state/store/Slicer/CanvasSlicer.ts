@@ -1,8 +1,8 @@
 import { MutableRefObject, useRef } from 'react';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { DemoTextBoxValue } from '@/app/constants/DemoTextBoxValue';
-import { TextBoxType } from '@/app/types/textBox';
-import { CanvasBgType } from '@/app/types/typeCanvasBg';
+import { TextBoxType } from '@/app/state/context/types/textBox';
+import { CanvasBgType } from '@/app/state/context/types/typeCanvasBg';
 
 const initCanvasState = {
   canvasBgType: 'Solid' as CanvasBgType,

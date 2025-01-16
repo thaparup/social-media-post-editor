@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
     }
 
     return (
-        <ActionIcon onClick={toggleColorScheme} mr={24}>
+        <ActionIcon onClick={toggleColorScheme} style={{ height: '35px', width: '35px' }}>
             {colorScheme === 'dark' ? <IconSun /> : <IconMoon />}
         </ActionIcon>
     )

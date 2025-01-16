@@ -1,7 +1,7 @@
 'use client'
-import { useAppDispatch, useAppSelector } from '@/app/lib/hooks';
+import { useAppDispatch, } from '@/app/lib/hooks';
 import { setCanvasBgColor } from '@/app/state/store/Slicer/CanvasSlicer';
-import { ColorPicker, Text } from '@mantine/core'
+import { ColorPicker } from '@mantine/core'
 import { on } from 'events';
 import React, { useEffect, useState } from 'react'
 

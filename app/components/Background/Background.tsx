@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { Button, ColorPicker, Flex, Menu, Text, } from '@mantine/core'
-import { useBackgroundPanelContext } from '@/app/state/context/BackgroundPanelContext'
+import React from 'react'
+import { Button, Flex, Menu, } from '@mantine/core'
 import Gradient from './Gradient'
 import { useAppDispatch, useAppSelector } from '@/app/lib/hooks'
 import { RootState } from '@/app/state/store/store'
@@ -8,7 +7,6 @@ import classes from './Background.module.css'
 import {
     setCanvasBgTypeAsSolid,
     setCanvasBgTypeAsGradient,
-    setCanvasBgTypeAsImage,
 } from '@/app/state/store/Slicer/CanvasSlicer'
 import Solid from './Solid'
 
@@ -36,19 +34,18 @@ const Background = () => {
                         component="a"
 
                         onClick={() => {
-                            console.log("Dispatching setCanvasBgTyAsGradient");
                             dispatch(setCanvasBgTypeAsGradient())
                         }}
                     >
                         Gradient
                     </Menu.Item>
-                    <Menu.Item
+                    {/* <Menu.Item
                         component="a"
 
                         onClick={() => dispatch(setCanvasBgTypeAsImage())}
                     >
                         Image
-                    </Menu.Item>
+                    </Menu.Item> */}
                 </Menu.Dropdown>
             </Menu>
 

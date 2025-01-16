@@ -1,13 +1,12 @@
 'use client'
 import { Dropzone, IMAGE_MIME_TYPE } from '@mantine/dropzone'
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import '@mantine/dropzone/styles.css';
 import { Flex, Group, Slider, Text } from '@mantine/core';
 
 import { useCanvas } from '@/app/state/context/CanvasContext';
 const Image = () => {
-    const sliderRef = useRef<number>(0)
-    const { filePath, setFilePath, bgImagePositionX, setBgImagePositionX, bgImageRotationDegree, setBgImageRotationDegree, bgImagePositionY, setBgImagePositionY, bgImageSkewX, setBgImageSkewX, bgImageSkewY, setBgImageSkewY } = useCanvas()
+    const { setFilePath, bgImagePositionX, setBgImagePositionX, bgImageRotationDegree, setBgImageRotationDegree, bgImagePositionY, setBgImagePositionY, bgImageSkewX, setBgImageSkewX, bgImageSkewY, setBgImageSkewY } = useCanvas()
 
     const handleDrop = (files: File[]) => {
         const file = files[0];

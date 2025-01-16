@@ -2,14 +2,11 @@
 
 import { useState } from 'react';
 import {
-  IconCalendarStats,
-  IconDeviceDesktopAnalytics,
-  IconFingerprint,
-  IconGauge,
   IconHome2,
-  IconSettings,
-  IconSwitchHorizontal,
-  IconUser,
+  IconLetterCase,
+  IconPhotoScan,
+  IconShape,
+
 } from '@tabler/icons-react';
 import { Stack, Tooltip, UnstyledButton } from '@mantine/core';
 import { useSelectPanelContext } from '@/app/state/context/SelectPanelContext';
@@ -34,17 +31,15 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 
 const mockdata = [
   { icon: IconHome2, label: 'Background' },
-  { icon: IconGauge, label: 'Text' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Image' },
-  { icon: IconCalendarStats, label: 'Releases' },
-  { icon: IconUser, label: 'Account' },
-  { icon: IconFingerprint, label: 'Security' },
-  { icon: IconSettings, label: 'Settings' },
+  { icon: IconLetterCase, label: 'Text' },
+  { icon: IconPhotoScan, label: 'Background Image' },
+  { icon: IconShape, label: 'Shapes' },
+
 ];
 
 export function Navbar() {
   const [active, setActive] = useState(0);
-  const { selected, setSelected } = useSelectPanelContext();
+  const { setSelected } = useSelectPanelContext();
 
   const links = mockdata.map((link, index) => (
     <NavbarLink

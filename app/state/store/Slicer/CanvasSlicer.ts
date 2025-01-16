@@ -10,6 +10,8 @@ const initCanvasState = {
   // canvasBgGradient: '' as String,
   // canvasBgImage: '' as String,
   canvasBgColor: '#f76707' as string,
+  exportWidth: 900,
+  exportHeight: 900,
 };
 
 const CanvasSlicer = createSlice({
@@ -32,6 +34,13 @@ const CanvasSlicer = createSlice({
     setCanvasBgColor: (state, action: PayloadAction<string>) => {
       state.canvasBgColor = action.payload;
     },
+    setExportWidth: (state, action: PayloadAction<number>) => {
+      state.exportWidth = action.payload;
+      console.log(state.exportHeight);
+    },
+    setExportHeight: (state, action: PayloadAction<number>) => {
+      state.exportHeight = action.payload;
+    },
     // setCanvasBgSolid: (state) => {
     //   state.canvasBgType = 'Solid';
     // },
@@ -49,6 +58,8 @@ export const {
   setCanvasBgTypeAsSolid,
   setCanvasBgTypeAsGradient,
   setCanvasBgTypeAsImage,
+  setExportWidth,
+  setExportHeight,
   // setCanvasBgSolid,
   // setCanvasBgGradient,
   // setCanvasBgImage,

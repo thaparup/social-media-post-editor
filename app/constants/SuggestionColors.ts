@@ -1,5 +1,8 @@
 export const suggestionColors = [
   {
+    points: ['#3e5efa', '#94a9ff', '#e91e63'],
+  },
+  {
     points: ['#228ae6', '#12b886'],
   },
   {
@@ -202,8 +205,5 @@ export const suggestionColors = [
   },
   {
     points: ['#d4c00b', '#b03b17', '#5e1701'],
-  },
-  {
-    points: ['#3e5efa', '#94a9ff', '#e91e63'],
   },
 ];
